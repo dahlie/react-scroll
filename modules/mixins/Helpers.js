@@ -207,6 +207,9 @@ var Helpers = {
     },
     componentDidMount: function() {
       __mapped[this.props.name] = this.getDOMNode();
+    },
+    componentWillUnmount: function() {
+      delete __mapped[this.props.name];
     }
   }
 };
